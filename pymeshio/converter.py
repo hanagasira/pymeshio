@@ -67,14 +67,14 @@ def pmd_to_pmx(src):
         elif path.find(b'*')==-1:
             return path
         else:
-            return b'*'.split(path)[0]
+            return path.split(b'*')[0]
     def get_sphere_texture_file(path):
         if len(path)==0:
             return None
         elif path.find(b'*')==-1:
             return None
         else:
-            return b'*'.split(path)[1]
+            return path.split(b'*')[1]
     def get_texture_index(path):
         try:
             return texture_map[get_texture_file(path)]
